@@ -67,4 +67,24 @@ for (int i=index; i<size-1; i++)
 }
 elems[--size]=null;
 }
+
+public static void main(String[] args)
+{
+    Container container = new Container();
+    container.add("cat");
+    container.add(2512);
+    container.add(5.1);
+
+    System.out.println("Size: " + container.getSize());
+
+    System.out.println(container.get(0));
+    System.out.println(container.get(1));
+    container.remove(1);
+
+    System.out.println("Size after remove: " + container.getSize());
+    System.out.println(container.get(1));
+
+
+
+}
 }
