@@ -10,4 +10,17 @@ public class Container {
     }
     public static void main(String[] args) {
     }
+
+public int getSize()
+{
+    return size;
+}
+
+private void resize()
+{
+    int newCapacity = elems.length*2;
+    Object[] newElements=new Object[newCapacity];
+    System.arraycopy(elems, 0,newElements, 0, elems.length);
+    elems=newElements;
+}
 }
