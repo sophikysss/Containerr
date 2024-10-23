@@ -4,12 +4,20 @@ public class Container {
     private static final int initialCapacity = 10;
 
 
-    public Container() {
+    public Container() 
+    {
         elems = new Object[initialCapacity];
         size = 0;
     }
-    public static void main(String[] args) {
-    }
+
+ public Container(int capacity) 
+ {
+        if (capacity <= 0) {
+            throw new IllegalArgumentException("Capacity must be greater than zero");
+        }
+        elems = new Object[capacity];
+        size = 0;
+ }
 
 public int getSize()
 {
