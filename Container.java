@@ -31,4 +31,18 @@ private void resize()
     System.arraycopy(elems, 0,newElements, 0, elems.length);
     elems=newElements;
 }
+
+public boolean isEmpty() 
+{
+        return size == 0;
+}
+
+public void add(Object elem)
+{
+    if(size == elems.length)
+    {
+        resize();
+    }
+    elems[size++]=elem;
+}
 }
